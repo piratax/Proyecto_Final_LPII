@@ -8,6 +8,6 @@ package com.example.demo.Controller;
  *
  * @author franc
  */
-public class MenuController {
+public class TipoMaterialesController {
     
 }

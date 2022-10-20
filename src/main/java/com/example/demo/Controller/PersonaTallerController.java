@@ -8,6 +8,6 @@ package com.example.demo.Controller;
  *
  * @author franc
  */
-public class LoginController {
+public class PersonaTallerController {
     
 }
