@@ -34,12 +34,12 @@ public class MaterialesServiceImpl implements MaterialesService {
 
     @Override
     public Materiales save(Materiales materiales) {
-        return materialesRepository.save(libro);
+        return materialesRepository.save(materiales);
     }
 
     @Override
     public void delete(Materiales materiales) {
-        materialesRepository.delete(libro);
+        materialesRepository.delete(materiales);
     }
 
     @Override

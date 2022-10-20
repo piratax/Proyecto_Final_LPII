@@ -4,10 +4,23 @@
  */
 package com.example.demo.Service;
 
+import com.example.demo.Entity.Programa;
+import java.util.List;
+import org.springframework.stereotype.Service;
+
 /**
  *
  * @author franc
  */
+@Service
 public interface ProgramaService {
-    
+         public List<Programa> findAll();
+
+    public Programa findById(Long id);
+
+    public Programa save(Programa programa);
+
+    public void delete(Programa programa);
+
+    public void deleteById(Long id);
 }

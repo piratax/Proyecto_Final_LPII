@@ -46,12 +46,12 @@ public class MaterialesController {
     @ApiOperation(value = "registrar un material")
     @PostMapping
     public Materiales save(@RequestBody Materiales materiales) {
-        return MaterialesService.save(materiales);
+        return materialesService.save(materiales);
     }
 
     @ApiOperation(value = "Elimina una material")
     @DeleteMapping(value = "/{id}")
     public void deleteById(@PathVariable Long id) {
-        MaterialesService.deleteById(id);
+        materialesService.deleteById(id);
     }
 }
