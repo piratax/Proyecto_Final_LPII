@@ -4,10 +4,38 @@
  */
 package com.example.demo.Entity;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import lombok.Data;
+
 /**
  *
  * @author franc
  */
+
+@Data
+@Entity
+@Table(name = "Taller")
 public class Taller {
-    
+     @Id
+    @Column(name = "taller_id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long tallerId;
+
+    @Column(name = "taller_nombre")
+    private String tallerNombre;
+
+    @Column(name = "taller_fechaIni")
+    private String tallerFecha;
+
+    @Column(name = "taller_descripcion")
+    private String tallerDescripcion;
+
+    @Column(name = "taller_lugar")
+    private String tallerLugar;
+
 }

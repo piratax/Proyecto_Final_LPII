@@ -4,10 +4,15 @@
  */
 package com.example.demo.Repository;
 
+import com.example.demo.Entity.Taller;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
 /**
  *
  * @author franc
  */
-public interface TallerRepository {
+@Repository
+public interface TallerRepository  extends CrudRepository<Taller, Long>{
     
 }
