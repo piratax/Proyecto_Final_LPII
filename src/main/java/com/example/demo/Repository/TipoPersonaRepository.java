@@ -4,10 +4,15 @@
  */
 package com.example.demo.Repository;
 
+import com.example.demo.Entity.TipoPersona;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
 /**
  *
  * @author franc
  */
-public interface TipoPersonaRepository {
+@Repository
+public interface TipoPersonaRepository extends CrudRepository<TipoPersona, Long>  {
     
 }

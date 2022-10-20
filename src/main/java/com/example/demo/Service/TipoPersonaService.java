@@ -4,10 +4,23 @@
  */
 package com.example.demo.Service;
 
+import com.example.demo.Entity.TipoPersona;
+import java.util.List;
+import org.springframework.stereotype.Service;
+
 /**
  *
  * @author franc
  */
-public interface TipoPersonaService {
-    
+@Service
+public interface TipoPersonaService  {
+    public List<TipoPersona> findAll();
+
+    public TipoPersona findById(Long id);
+
+    public TipoPersona save(TipoPersona tipoPersona);
+
+    public void delete(TipoPersona tipoPersona);
+
+    public void deleteById(Long id);
 }

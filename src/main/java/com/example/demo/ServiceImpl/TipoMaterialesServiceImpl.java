@@ -4,10 +4,44 @@
  */
 package com.example.demo.ServiceImpl;
 
+import com.example.demo.Entity.TipoMateriales;
+import com.example.demo.Repository.TipoMaterialesRepository;
+import com.example.demo.Service.TipoMaterialesService;
+import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 /**
  *
  * @author franc
  */
-public class TipoMaterialesServiceImpl {
-    
+@Service
+public class TipoMaterialesServiceImpl implements TipoMaterialesService {
+    @Autowired
+    private TipoMaterialesRepository tipoMaterialesRepository;
+
+   @Override
+    public List<TipoMateriales> findAll() {
+        return (List<TipoMateriales>) tipoMaterialesRepository.findAll();
+    }
+
+    @Override
+    public TipoMateriales findById(Long id){
+        return tipoMaterialesRepository.findById(id).orElse(null);
+    }
+
+    @Override
+    public TipoMateriales save(TipoMateriales editorial) {
+        return tipoMaterialesRepository.save(editorial);
+    }
+
+    @Override
+    public void delete(TipoMateriales editorial) {
+        tipoMaterialesRepository.delete(editorial);
+    }
+
+    @Override
+    public void deleteById(Long id) {
+        tipoMaterialesRepository.deleteById(id);
+    } 
 }

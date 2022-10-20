@@ -4,10 +4,15 @@
  */
 package com.example.demo.Repository;
 
+import com.example.demo.Entity.TipoMateriales;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
 /**
  *
  * @author franc
  */
-public interface TipoMaterialesRepository {
+@Repository
+public interface TipoMaterialesRepository extends CrudRepository<TipoMateriales, Long>{
     
 }
