@@ -27,9 +27,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/materiales")
 @Api(value = "Microservicio de materiales", description = "Microservicio de materiales")
 public class MaterialesController {
-       @Autowired
-    MaterialesService materialesService;
-
+    @Autowired
+     MaterialesService materialesService;
+    
     @ApiOperation(value = "Lista de materiales")
     @GetMapping
     public List<Materiales> findAll() {
