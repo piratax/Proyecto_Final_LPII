@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
- */
+
 package com.example.demo.Service;
 
 import com.example.demo.Entity.Materiales;
@@ -14,7 +11,8 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public interface MaterialesService {
-         public List<Materiales> findAll();
+
+    public List <Materiales> findAll ();
 
     public Materiales findById(Long id);
 

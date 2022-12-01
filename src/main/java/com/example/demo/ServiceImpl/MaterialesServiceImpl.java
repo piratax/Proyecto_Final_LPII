@@ -18,8 +18,10 @@ import org.springframework.stereotype.Service;
  * @author franc
  */
 
-public class MaterialesServiceImpl implements MaterialesService {
-      @Autowired
+@Service
+    public class MaterialesServiceImpl implements MaterialesService {
+    
+    @Autowired
     private MaterialesRepository materialesRepository;
 
     @Override

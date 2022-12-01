@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.example.demo.Entity;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -17,7 +13,7 @@ import lombok.Data;
  */
 @Data
 @Entity
-@Table(name = "Libro")
+@Table(name = "Materiales")
 public class Materiales {
     @Id
     @Column(name = "mate_id")
@@ -32,6 +28,10 @@ public class Materiales {
 
     @Column(name = "Mate_Detalle")
     private String MateDetalle;
+
+    public void setMId(Long id) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 
    
 }
