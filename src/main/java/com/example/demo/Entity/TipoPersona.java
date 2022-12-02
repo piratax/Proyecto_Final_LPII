@@ -20,6 +20,10 @@ import lombok.Data;
 @Entity
 @Table(name = "TipoPersona")
 public class TipoPersona {
+
+    public static void setMId(Long id) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     @Id
     @Column(name = "TP_Id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)

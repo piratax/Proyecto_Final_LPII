@@ -81,7 +81,7 @@ public class MaterialesController {
         }
     }
 
-    @ApiOperation(value = "Elimina un programa")
+    @ApiOperation(value = "Elimina un material")
     @DeleteMapping("/{id}")
     public ResponseEntity<?> deleteById(@PathVariable Long id) {
         HashMap<String, Object> result = new HashMap<>();

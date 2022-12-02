@@ -25,7 +25,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/persona")
-@Api(value = "Microservicio de una persona", description = "Microservicio de personas")
+@Api(value = "Microservicio de una persona", description = " de personas")
 public class PersonaController {
      @Autowired
     PersonaService personaService;
