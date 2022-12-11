@@ -9,6 +9,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import lombok.Data;
 
@@ -37,5 +39,9 @@ public class Taller {
 
     @Column(name = "taller_lugar")
     private String tallerLugar;
+
+    @ManyToOne ()//De muchos a uno
+    @JoinColumn(name = "prog_id")
+    private Programa programa;
 
 }

@@ -9,6 +9,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import lombok.Data;
 
@@ -18,16 +20,19 @@ import lombok.Data;
  */
 @Data
 @Entity
-@Table(name = "PersonaTaller")
-public class PersonaTaller {
-    @Id
-    @Column(name = "PT_id")
+@Table(name ="Asistencia")
+public class Asistencia {
+     @Id
+    @Column(name = "Asis_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long ptId;
+    private Long AsisId;
 
-    @Column(name = "PT_idPersona")
-    private String ptIdPersona;
-   
-    @Column(name = "PT_idTaller")
-    private String ptIdTaller;
+
+
+    @ManyToOne
+    @JoinColumn(name = "pers_id")
+    private Persona persona ;
+
+    
+
 }

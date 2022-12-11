@@ -5,29 +5,27 @@
 package com.example.demo.Entity;
 
 import javax.persistence.Column;
-import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Table;
-import lombok.Data;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 /**
  *
  * @author franc
  */
-@Data
-@Entity
-@Table(name = "PersonaTaller")
-public class PersonaTaller {
+public class PedidosOracion {
     @Id
-    @Column(name = "PT_id")
+    @Column(name = "PedidoId")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long ptId;
+    private Long PedidoId;
 
-    @Column(name = "PT_idPersona")
-    private String ptIdPersona;
-   
-    @Column(name = "PT_idTaller")
-    private String ptIdTaller;
+
+    @Column(name = "Descripcion")
+    private String PedDesc;
+
+    @ManyToOne
+    @JoinColumn(name = "pers_id")
+    private Persona persona ;
 }
